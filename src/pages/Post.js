@@ -33,7 +33,6 @@ const Post = ({ posts }) => {
       <div className="post-content-comments">
         <div className="post-content">
           <img src={post.img}></img>
-          <p></p>
           <h3>{post.title}</h3>
           <div id="post-content"></div>
         </div>
@@ -54,7 +53,11 @@ const Post = ({ posts }) => {
           return (
             <div className="post-div">
               <div className="post-info-div">
-                <h2>{post.title}</h2>
+                <h3>
+                  {post.title.length > 16
+                    ? post.title.slice(0, 16) + " ..."
+                    : post.title}
+                </h3>
                 <p style={{ fontSize: "13px", color: "gray", margin: "0" }}>
                   {post?.createdAt?.toDate().toLocaleString()}
                 </p>

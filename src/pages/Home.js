@@ -13,7 +13,7 @@ const Home = ({ posts }) => {
     <div className="home-div">
       <div className="last-post-div">
         <h2>{posts[0]?.title}</h2>
-        <p style={{ wordBreak: "break-all" }}>
+        <p style={{ wordBreak: "break-word" }}>
           {posts[0]?.content.slice(0, 70)} ...{" "}
         </p>
         <Link to={`/post/${posts[0]?.id}`}>

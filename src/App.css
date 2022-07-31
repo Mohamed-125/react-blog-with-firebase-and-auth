@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 :root {
   --img: ;
 }
@@ -6,6 +7,7 @@ html {
 }
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -82,7 +84,7 @@ header {
   height: 180px;
   min-width: 300px;
   gap: 20px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .img-div {
@@ -95,10 +97,21 @@ header {
 
 .post-info-div {
   width: 70%;
+  position: relative;
+  top: -8px;
+}
+.post-info-div h3 {
+  font-size: clamp(16px, 2vw, 18px);
+  margin-bottom: 4px;
 }
 .post-info-div h2 {
   font-size: clamp(16px, 2vw, 20px);
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+  margin-top: 28px;
+}
+.post-info-div p {
+  margin-top: 4px;
+  margin-bottom: 7px;
 }
 @media (max-width: 560px) {
   .posts-grid {
@@ -134,7 +147,7 @@ header {
   max-width: none;
   width: 70%;
   min-width: 600px;
-  word-break: break-all;
+  word-break: break-word;
 }
 .post-content {
   min-height: 700px;
@@ -162,7 +175,7 @@ header {
   }
   .post-content-comments {
     width: 100%;
-    word-break: break-all;
+    word-break: break-word;
     min-width: 0;
   }
   .other-posts .post-div {
@@ -210,4 +223,10 @@ header {
 .comment-trash-icon:hover {
   color: red;
   transform: scale(1.1);
+}
+
+.post-content {
+  font-size: 1.023rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.832);
 }

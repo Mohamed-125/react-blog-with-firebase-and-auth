@@ -1,9 +1,9 @@
 import React from "react";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithCredential } from "firebase/auth";
 import { auth, provider } from "../Config";
 const SignIn = () => {
   const signInHanlder = () => {
-    signInWithPopup(auth, provider).then((res) => {
+    signInWithCredential(auth, provider).then((res) => {
       localStorage.setItem("signIn", "true");
       window.history.go(-1);
       console.log(localStorage.getItem("signIn") === "true");

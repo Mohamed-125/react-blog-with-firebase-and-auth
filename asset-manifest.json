@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-blog-with-firebase-and-auth/static/css/main.6e655943.css",
+    "main.js": "/react-blog-with-firebase-and-auth/static/js/main.eb2ba23d.js",
+    "index.html": "/react-blog-with-firebase-and-auth/index.html",
+    "main.6e655943.css.map": "/react-blog-with-firebase-and-auth/static/css/main.6e655943.css.map",
+    "main.eb2ba23d.js.map": "/react-blog-with-firebase-and-auth/static/js/main.eb2ba23d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e655943.css",
+    "static/js/main.eb2ba23d.js"
+  ]
+}

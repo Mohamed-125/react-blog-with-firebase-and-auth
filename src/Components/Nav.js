@@ -1,8 +1,15 @@
 import { signOut } from "firebase/auth";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../Config";
 const Nav = () => {
+  const [signedIn, setSignedIn] = useState("");
+  useEffect(() => {
+    setSignedIn(localStorage.getItem("signIn"));
+    window.addEventListener("storage", () => {
+      setSignedIn(localStorage.getItem("signIn"));
+    });
+  }, []);
   return (
     <header>
       <div>
@@ -10,10 +17,15 @@ const Nav = () => {
           <h3>Nav</h3>
         </Link>
       </div>
-      {localStorage.getItem("signIn") !== "true" ? (
-        <Link to="/signIn">
-          <button>SignIn</button>
-        </Link>
+      {signedIn !== "true" ? (
+        <button
+          onClick={() => {
+            document.querySelector(".overLay").style.display = "block";
+            document.querySelector(".signIn-div").style.display = "flex";
+          }}
+        >
+          SignIn
+        </button>
       ) : (
         <button
           onClick={() => {

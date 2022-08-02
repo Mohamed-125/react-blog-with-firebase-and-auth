@@ -230,3 +230,26 @@ header {
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.832);
 }
+
+.overLay {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.657);
+}
+
+.signIn-div {
+  display: none;
+  width: 90%;
+  height: 90%;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  align-items: center;
+  background-color: white;
+}

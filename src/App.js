@@ -19,17 +19,22 @@ function App() {
     });
   }, []);
   return (
-    <Router>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home posts={posts} setPosts={setPosts} />} />
-        <Route
-          path="post/:id"
-          element={<Post posts={posts} setPosts={setPosts} />}
-        />
-        <Route path="/signIn" element={<SignIn />} />
-      </Routes>
-    </Router>
+    <>
+      <SignIn />
+      <Router>
+        <Nav />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home posts={posts} setPosts={setPosts} />}
+          />
+          <Route
+            path="post/:id"
+            element={<Post posts={posts} setPosts={setPosts} />}
+          />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

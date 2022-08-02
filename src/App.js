@@ -23,7 +23,7 @@ function App() {
     <>
       <SignIn setSignedIn={setSignedIn} />
       <Router>
-        <Nav />
+        <Nav setSignedIn={setSignedIn} signedIn={signedIn} />
         <Routes>
           <Route
             path="/"

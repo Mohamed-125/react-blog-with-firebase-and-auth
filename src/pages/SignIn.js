@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { onAuthStateChanged, signInWithRedirect } from "firebase/auth";
 import { auth, provider } from "../Config";
-const SignIn = () => {
+const SignIn = ({ setSignedIn }) => {
   const signInHanlder = () => {
     signInWithRedirect(auth, provider);
   };
@@ -12,6 +12,9 @@ const SignIn = () => {
         localStorage.setItem("signIn", "true");
         document.querySelector(".overLay").style.display = "none";
         document.querySelector(".signIn-div").style.display = "none";
+        setSignedIn("true");
+      } else {
+        setSignedIn("false");
       }
     });
   }, []);

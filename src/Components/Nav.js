@@ -2,8 +2,7 @@ import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../Config";
-const Nav = () => {
-  const [signedIn, setSignedIn] = useState("");
+const Nav = ({ signedIn, setSignedIn }) => {
   useEffect(() => {
     setSignedIn(localStorage.getItem("signIn"));
     window.addEventListener("storage", () => {

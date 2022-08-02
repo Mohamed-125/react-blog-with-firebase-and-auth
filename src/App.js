@@ -8,6 +8,7 @@ import Post from "./pages/Post";
 import Nav from "./Components/Nav";
 import SignIn from "./pages/SignIn";
 function App() {
+  const [signedIn, setSignedIn] = useState("");
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     const q = query(colRef, orderBy("createdAt", "desc"));
@@ -20,7 +21,7 @@ function App() {
   }, []);
   return (
     <>
-      <SignIn />
+      <SignIn setSignedIn={setSignedIn} />
       <Router>
         <Nav />
         <Routes>
